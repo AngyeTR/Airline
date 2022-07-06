@@ -1,9 +1,14 @@
+
+/* Shared style and initial styles */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+
+/* Main colors and font weight */
 :root {
 --color1:#ffffff;
 --color2: #5999b7;
@@ -17,10 +22,10 @@
 --font3: 300;
 }
 
+
 html {
     font-family: var(--font-family);
 }
-
 
 h1 {
     font-weight: var(--font1);
@@ -35,9 +40,16 @@ h3 {
 ul a:hover{
     text-decoration: underline;
 }
+a {
+    text-decoration: none;
+    color: var(--color1);    
+}
+a:hover {
+    text-decoration: underline;
+}
 
 
-/* header */
+/* ------------ header ------------  */
 
 header {
     background: var(--color1) url("../images/plane.jpg") no-repeat;
@@ -49,25 +61,25 @@ header {
     max-height: 400px;
     min-width: 400px;
 }
+
+/* title Styles */
+
 .title-container {
     display: inline-block;
     width: 60%;  
     padding-top: 0px;
-    padding-right: 0px;
-    
+    padding-right: 0px;  
 }
-.titleMenu-container {
-    display: inline-block;
-    width: 35%;
-    padding-left: 5%;  
-}
-.titleOffer {
+
+/* Header content styles */
+
+.headerContent {
     color:var(--color1);
     padding-top: 15%;
     padding-bottom: 10%;
     font-size: 1em;
 }
-.titleOffer button {
+.headerContent button {
     width: 35%;
     min-width: 180px;
     border-style: none;
@@ -79,24 +91,27 @@ header {
     padding: 14px;
     margin-top: 10%;  
 }
+.headerContent button:hover {
+    transform: scale(1.05); 
+    box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.68); 
+}
 
-
-/* Menú idiomas */
+/* Language Menu */
 
 .languageMenu-container {
     display: block;
     text-align:  end;
     color: var(--color1);
 }
-.languageMenu-container nav {
+.languageMenu-container ul {
     display: none;
 }
-.languageMenu-container ul {
+.languageMenu-container {
     list-style: none;
         margin: 0;
         padding: 0;    
 }
-.languageMenu ul {
+.languageMenu  { 
     background: var(--color1);
     list-style: none;
     text-align: left;
@@ -106,44 +121,46 @@ header {
     position: absolute;
     right: 0;
     z-index: 100;
-    margin-right: 50px;
+    margin-right: 5%;
 }
-.languageMenu ul li a{
+.languageMenu li a{
     text-decoration: none;
     color: var(--color2);
 }
-.languageMenu-container ul li:hover > nav {
+.languageMenu a:hover{
+    text-decoration: underline;
+}
+.languageMenu-container:hover > ul {
     display: block;
    }
 
-
    /* Options Menu */
-.titleMenu-container {
+
+.headerMenu-container {
+    display: inline-block;
+    width: 35%;
+    padding-left: 5%;  
     position: absolute;
     top: 20px;
 }
-   .titleOptionMenu ul{
+   .headerOptionMenu ul{
     list-style: none;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
     margin: 0;
     padding-top: 10px;
-    
    }
-
-   .titleOptionMenu a {
+   .headerOptionMenu a {
     color: var(--color1);
     text-decoration: none;
     padding: 0;
    }
-  
 
-   /* Main */
+   /* ------------ Main ------------  */
+
 main {
-    display: inline;
-   
-    
+    display: inline; 
 }
 main h2 {
     width: 90%;
@@ -152,21 +169,28 @@ main h2 {
     padding-bottom: 4%;
     color: var(--color2);
 }
-
    .mainSection {
     width: 90%;
     margin-left: 5%;
     display: grid;
     grid-template-columns: 72% 28%;
     }
-
-    .chosenOffer-container {
+    .chosenDestination-container {
         text-align: center;
         padding: 3%;
         margin-left: 30%; 
         width: 40%;
         justify-self: center;
     }
+    .chosenDestination-container p{
+        color:var(--color4)
+     }
+    
+     .chosenDestination-container #chosenDestinationName {
+        color:var(--color3)
+     }
+
+/* Main Menu styles */
 
     .mainMenu-container {
         border-radius: 15px;
@@ -174,8 +198,10 @@ main h2 {
         padding: 0px;
         padding-bottom: 3%;
         width: 90%;
-        box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.68);
-        
+        box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.68);  
+    }
+    .mainMenu-container:hover {
+        transform: scale(1.05);  
     }
     .mainMenu-container h3{
         padding: 15%;
@@ -183,15 +209,13 @@ main h2 {
         color: var(--color3);
     }
     .mainMenu-container ul{
-        list-style: none;
-        
+        list-style: none; 
     }
     .mainMenu-container ul li{
         padding: 4%; 
         padding-left: 10%;  
         border-top: 1px solid var(--color3);
     }
-    
     .mainMenu-container a{
         text-decoration: none;
         color: var(--color3); 
@@ -205,42 +229,44 @@ main h2 {
         font-size: 20px;
     }
 
-   .offer-card {
-    border: 0.3px solid var(--color6);
-    width: 28%;
-    min-width: 160px;
-    height: 150px;
-    border-radius: 15px;
-    display: inline-block;
-    margin: 10px;
-    box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.68);
-    background-size: cover;
-   }
-.offer-card .text {
-    height: 50%;
-    padding:5px;
-    position: relative;
-    top: 50%; 
-    border-radius: 0 0 15px 15px;
-    background-color: rgba(0,0,0,0.6);
-}
+ /* Destination styles */
 
-.offer-card p {
+   .destination-card {
+        border: 0.3px solid var(--color6);
+        width: 28%;
+        min-width: 160px;
+        height: 150px;
+        border-radius: 15px;
+        display: inline-block;
+        margin: 10px;
+        box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.68);
+        background-size: cover;
+   }
+   .destination-card:hover {
+        transform: scale(1.05);  
+    }
+    .destination-card .text {
+         height: 50%;
+        padding:5px;
+        position: relative;
+        top: 50%; 
+        border-radius: 0 0 15px 15px;
+        background-color: rgba(0,0,0,0.6);
+    }
+.destination-card p {
     color: var(--color1);
     font-size: 0.9em;
     padding: 10px;
 }
-.offer-card h3 {
+.destination-card h3 {
     color: var(--color1);
     padding: 5px;
     text-align:end;
     font-weight: var(--font1);
 }
  #moscow {
-    background-image: url("../images/moscow.jpg");
-    
+    background-image: url("../images/moscow.jpg");   
 }
-
 #puertoRico {
     background-image: url("../images/puerto-rico.jpg");
 }
@@ -248,14 +274,7 @@ main h2 {
     background-image: url("../images/honduras.jpg");
  }
 
- .chosenOffer-container p{
-    color:var(--color4)
- }
-
- .chosenOffer-container #ChosenOfferName {
-    color:var(--color3)
- }
-
+/* ------------ FOOTER ------------ */
 
  footer {
     margin-top: 5%;
@@ -263,10 +282,9 @@ main h2 {
     background-color: var(--color6);
     justify-items: center;
  }
- .iconImg {
-    width: 28px;
-  
- }
+
+ /* Contact Information styles */
+ 
  .contactInfo-container {
     width: 150px;
     justify-items: space-between;
@@ -275,13 +293,20 @@ main h2 {
  .contactInfo-container a {
     margin: calc((100% - 84px)/8);
  }
-
  .contactInfo-container h3 {
     text-align: center;
     padding: 15%;
     color: var(--color1);
     font-weight: var(--font2);
  }
+ .iconImg {
+    width: 28px;
+ }
+ .iconImg:hover {
+    transform: scale(1.05);
+ }
+
+/* Footer information styles */
 
  footer section {
     width: 100%;
@@ -289,13 +314,11 @@ main h2 {
     padding-top: 0;
     display: flex;
  }
-
  .menuFooter {
     width: 25%;
     padding: 2%;
     color: var(--color1);
  }
-
  .menuFooter ul li {
     list-style: none;
     padding-top: 5%;
@@ -304,164 +327,158 @@ main h2 {
     text-decoration: none;
     color: var(--color1);
  }
-
  .menuFooter p {
     font-size: 0.9rem;
  }
  .menuFooter h3 {
     color: var(--color5);
     padding: 5%;
+    padding-left: 0;
+    text-align:start;
  }
 
+ /* ------------- RESPONSIVE ------------- */
+
+/* Small devices */
+
  @media screen and (max-width: 580px) {
+
+/* Header */
+
     .title-container {
         display: block;
-        width: 100%;  
-        
-        
+        width: 100%;    
     }
-    .titleMenu-container {
+    .headerMenu-container {
         display: block;
         width: 100%;
         padding-left: 5%;
         position: relative;
         top: 35%;
     }
-    .titleOffer {
+    .headerMenu-container ul li:hover{
+        background-color: rgba(0, 0, 0, 0.137);
+        box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.68);
+        border-radius: 18px;
+        transform: scale(1.1);
+    }
+    .headerContent {
         color:var(--color1);
         padding-top: 2%;
         padding-bottom: 2%;
         font-size: 1em;
     }
-    .titleOffer button {
-
+    .headerContent button {
         width: 180px;
-        border-style: none;
-        color: var(--color1);
-        font-weight: var(--font1);
         font-size: 12px;
-        background: var(--color5);
-        border-radius: 60px;
         padding: 14px;
         margin-top: 2%;  
     }
-
-    .mainSection {
-        width: 90%;
-        margin-left: 5%;
-        display: grid;
-        grid-template-columns: 60% 40%;
+    .languageMenu  {  
+        margin-right: 1%;
     }
-    .mainMenu-container {
-        margin-left: 2%;
-        height: 450px;
 
+/* Main */
+
+.mainSection {
+    width: 90%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+.mainMenu-container {
+    margin-left: 2%;
+    height: 450px;
  }
  .mainMenu-container ul li {
     padding-top: 8%;
     padding-bottom: 8%;
-
 }
-
- .offer-card {
+ .destination-card {
    width: 90%;
     min-width: 155px;
     height: 150px;
-    
    }
-   .chosenOffer-container {
-    
+.chosenDestination-container {
     margin-left: 10%;
     width: 80%;
 }
 
+/* Footer */
 
 footer section {
     display: flex;
     flex-wrap: wrap;
  }
-
  .menuFooter {
     width: 50%;
     padding: 1%;
     color: var(--color1);
  }
  .menuFooter ul li{
-    
     padding: 1%;
-    
  }
 
 }
 
+/* Medium Devices */
 
 @media (min-width: 580px) and (max-width: 900px) {
+
+/* Header */
+
     .title-container {
         display: inline-block;
         width: 55%;  
         padding-top: 0px;
-        padding-right: 0px;
-        
+        padding-right: 0px; 
     }
     .titleMenu-container {
         display: inline-block;
         width: 45%;
         padding-left: 5%;  
     }
-  
-      
-       .titleOptionMenu ul li{
-        font-size: 0.9rem;
+       .headerOptionMenu ul li{
+        font-size: 0.85rem;
+        padding-left: 1%;
        }   
-
-
-    .titleOffer {
+    .headerContent {
         color:var(--color1);
         padding-top: 15%;
         padding-bottom: 10%;
         font-size: 1em;
     }
-    .titleOffer button {
+    .headerContent button {
         width: 35%;
         min-width: 180px;
-        border-style: none;
-        color: var(--color1);
-        font-weight: var(--font1);
         font-size: 16px;
-        background: var(--color5);
-        border-radius: 60px;
-        padding: 14px;
-        margin-top: 10%;  
+     
     }
-    .mainSection {
-        width: 90%;
-        margin-left: 5%;
-        display: grid;
-        grid-template-columns: 70% 30%;
-    }
-    .mainMenu-container {
-        margin-left: 2%;
-        height: 450px;
 
+/* Main */
+
+.mainSection {
+    width: 90%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.mainMenu-container {
+    margin-left: 2%;
+    height: 450px;
  }
  .mainMenu-container ul li {
     padding-top: 8%;
     padding-bottom: 8%;
-
 }
-
- .offer-card {
+ .destination-card {
    width: 40%;
     min-width: 155px;
-    height: 150px;
-    
-   }
-   .chosenOffer-container {
+    height: 150px;   
+}
+   .chosenDestination-container {
     margin-left:20%;
     width: 60%;
 }
-
-
-
 
 }

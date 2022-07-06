@@ -10,81 +10,94 @@
     </style>
     <title>Airline</title>
 </head>
-
+<!--  -->
 <body>
+
+    <!-- ------------ HEADER ------------  -->
+    
     <header>
-        <div class="languageMenu-container">
-            <ul>
-			<li>en &#709
-            <nav class="languageMenu">
-                <ul>
-                            <li class="lang" id="en"><a href="#">EN - English</a></li>
-                            <li class="lang" id="ru"><a href="#">RU - Russian</a></li>
-                            <li class="lang" id="de"><a href="#">DE - German</a></li>
-                            <li class="lang" id="fr"><a href="#">FR - French</a></li>
-                </ul>
-            </nav>
-            </li>
+    <!-- Launguage Menu -->
+
+        <div class="languageMenu-container"> en &#709 
+            <ul class="languageMenu">
+                <li class="lang" id="ru"><a href="#">RU - Russian</a></li>
+                <li class="lang" id="de"><a href="#">DE - German</a></li>
+                <li class="lang" id="fr"><a href="#">FR - French</a></li>
             </ul>
-    </div>
+        </div>
 
-
-
+    <!-- Header Content -->
 
         <div class="title-container"> 
             <h1 class="titleName">AIRLINE</h1>
-            <article class="titleOffer">
+            <article class="headerContent">
                 <h2>Visit Canada with prices from $800</h2>
                 <p>Prepare your bags and forget your worries </p>
                 <p>to start enjoying your holidays in this fantastic country</p>
-                <button>BUY NOW</button>
+                <button><a href="#">BUY NOW</a></button>
             </article>
         </div>
-        <div class="titleMenu-container">
-    
-            <nav class="titleOptionMenu">
+
+    <!-- Header Menu -->
+
+        <div class="headerMenu-container">
+            <nav class="headerOptionMenu">
                 <ul>
                     <li class="menuOption" id="optionHome"><a href="#">Home</a></li>
-                    <li class="menuOption" id="optionAbout"><a href="#">About</a></li>
-                    <li class="menuOption" id="optionDestination"><a href="#">Destination</a></li>
-                    <li class="menuOption" id="optionContact"><a href="#">Contact</a></li>
+                    <li class="menuOption" id="optionAbout"><a href="#about">About</a></li>
+                    <li class="menuOption" id="optionDestination"><a href="#destinations">Destination</a></li>
+                    <li class="menuOption" id="optionContact"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+
+<!-- ------------- MAIN   -------------  -->
+
     <main>
          
         <h2>Offers <hr></h2>
-        
-        <div class="mainSection">
-            <div class="offer-container">
-                <div class="offerCard-container">
-                    <div class="offer-card" id="moscow">
-                        <div class="text">
-                            <p>Trip to Moscow</p>
+        <div class="mainSection" >
+
+         <!-- Destinations -->
+
+            <div class="destination-container" id="destinations">
+                <div class="destinationCard-container">
+                    <a href="#">
+                        <div class="destination-card" id="moscow">
+                            <div class="text">
+                                <p>Trip to Moscow</p>
+                                <h3>Price $600,86</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="destination-card" id="puertoRico">
+                            <div class="text">
+                            <p>Trip to Puerto Rico</p>
                             <h3>Price $600,86</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="offer-card" id="puertoRico">
-                        <div class="text">
-                        <p>Trip to Puerto Rico</p>
-                        <h3>Price $600,86</h3>
+                    </a>  
+                    <a href="#">
+                        <div class="destination-card" id="honduras">
+                            <div class="text">
+                            <p>Trip to Honduras</p>
+                            <h3>Price $600,86</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="offer-card" id="honduras">
-                        <div class="text">
-                        <p>Trip to Honduras</p>
-                        <h3>Price $600,86</h3>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="chosenOffer-container">
-                    <p class="offerName" id="ChosenOfferName" >Trip to Honduras</p>
+                <div class="chosenDestination-container">
+                    <p class="offerName" id="chosenDestinationName" >Trip to Honduras</p>
                     <hr>
                     <p>Chosen Destination</p>
                 </div>
             </div>
+
+         <!-- Main Menu -->
+
             <div class="mainMenu-container"> 
                 <h3 class="mainMenu-title">Menu</h3>
                 <ul>
@@ -97,21 +110,24 @@
             </div>
         </div>
         
-        </div>    
-
-        </div>
-    </div>
     </main>
 
+    <!-- ------------ FOOTER ------------  -->
+
     <footer>
+
+        <!-- Contact Info -->
             <div class="contactInfo-container" id="contact">
                 <h3>Follow us</h3>
                 <a href="#"><img class="iconImg" src="./images/facebook.svg"></a>
                 <a href="#"><img class="iconImg" src="./images/instagram.svg"></a>
                 <a href="#"><img class="iconImg" src="./images/twitter.svg"></a>
             </div>
+
+        <!-- Footer Menu  -->
+
             <section>
-            <div class="menuFooter">
+            <div class="menuFooter" id="about">
                 <h3>About us</h3>
                 <p>We want to help passengers to reach their destinations </p>
             </div>
@@ -119,8 +135,8 @@
                 <h3>Explore</h3>
                 <ul>
                     <li><a href="#">Home<a></li>
-                    <li><a href="#">Destinations</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#about">About</a></li>
                 </ul>
             </div>
             <div class="menuFooter">
