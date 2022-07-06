@@ -1,0 +1,18 @@
+{
+  "name": "prueba-maquetacion",
+  "version": "1.0.0",
+  "description": "Desarrollo de prueba de maquetacion de diseño propuesto por la comapania",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "maquetacion",
+    "usabilidad",
+    "responsive"
+  ],
+  "author": "@AngyeTR",
+  "license": "MIT"
+}
