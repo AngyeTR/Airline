@@ -14,40 +14,27 @@
 <body>
 
     <!-- ------------ HEADER ------------  -->
-    
+
     <header>
     <!-- Launguage Menu -->
 
-        <div class="languageMenu-container"> en &#709 
-            <ul class="languageMenu">
-                <li class="lang" id="ru"><a href="#">RU - Russian</a></li>
-                <li class="lang" id="de"><a href="#">DE - German</a></li>
-                <li class="lang" id="fr"><a href="#">FR - French</a></li>
-            </ul>
+        <div class="languageMenu-container"> 
+            <span id="langCode">en </span>
+            <span><img src="./images/arrow-down.svg"></span> 
+            <ul class="languageMenu"> </ul>
         </div>
 
     <!-- Header Content -->
 
         <div class="title-container"> 
             <h1 class="titleName">AIRLINE</h1>
-            <article class="headerContent">
-                <h2>Visit Canada with prices from $800</h2>
-                <p>Prepare your bags and forget your worries </p>
-                <p>to start enjoying your holidays in this fantastic country</p>
-                <button><a href="#">BUY NOW</a></button>
-            </article>
         </div>
 
     <!-- Header Menu -->
 
         <div class="headerMenu-container">
             <nav class="headerOptionMenu">
-                <ul>
-                    <li class="menuOption" id="optionHome"><a href="#">Home</a></li>
-                    <li class="menuOption" id="optionAbout"><a href="#about">About</a></li>
-                    <li class="menuOption" id="optionDestination"><a href="#destinations">Destination</a></li>
-                    <li class="menuOption" id="optionContact"><a href="#contact">Contact</a></li>
-                </ul>
+                <ul class="optionList"></ul>
             </nav>
         </div>
     </header>
@@ -64,102 +51,46 @@
 
             <div class="destination-container" id="destinations">
                 <div class="destinationCard-container">
-                    <a href="#">
-                        <div class="destination-card" id="moscow">
-                            <div class="text">
-                                <p>Trip to Moscow</p>
-                                <h3>Price $600,86</h3>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="destination-card" id="puertoRico">
-                            <div class="text">
-                            <p>Trip to Puerto Rico</p>
-                            <h3>Price $600,86</h3>
-                            </div>
-                        </div>
-                    </a>  
-                    <a href="#">
-                        <div class="destination-card" id="honduras">
-                            <div class="text">
-                            <p>Trip to Honduras</p>
-                            <h3>Price $600,86</h3>
-                            </div>
-                        </div>
-                    </a>
                 </div>
-                <div class="chosenDestination-container">
-                    <p class="offerName" id="chosenDestinationName" >Trip to Honduras</p>
-                    <hr>
-                    <p>Chosen Destination</p>
-                </div>
+
+                <a href="#">
+                    <div class="chosenDestination-container">
+                        <p class="offerName" id="chosenDestinationName" ></p>
+                        <hr>
+                        <p>Chosen Destination</p>
+                    </div>
+                </a>
             </div>
 
          <!-- Main Menu -->
 
             <div class="mainMenu-container"> 
-                <h3 class="mainMenu-title">Menu</h3>
-                <ul>
-                    <li class="mainMenu-option"><a href="#"><span> &#9656 </span>  Check-in</a></li>
-                    <li class="mainMenu-option"><a href="#"> <span> &#9656 </span> Manage My Booking</a></li>
-                    <li class="mainMenu-option"><a href="#"> <span> &#9656 </span> Search</a></li>
-                    <li class="mainMenu-option"><a href="#"> <span> &#9656 </span> Destination</a></li>
-                    <li class="mainMenu-option"><a href="#"> <span> &#9656 </span> Members</a></li>
-                </ul>
+                <h3>Menu</h3>
+                <ul class="mainMenuList"> </ul>
             </div>
         </div>
         
-    </main>
+    </main
 
     <!-- ------------ FOOTER ------------  -->
 
     <footer>
 
         <!-- Contact Info -->
+        
             <div class="contactInfo-container" id="contact">
                 <h3>Follow us</h3>
-                <a href="#"><img class="iconImg" src="./images/facebook.svg"></a>
-                <a href="#"><img class="iconImg" src="./images/instagram.svg"></a>
-                <a href="#"><img class="iconImg" src="./images/twitter.svg"></a>
             </div>
 
         <!-- Footer Menu  -->
 
-            <section>
-            <div class="menuFooter" id="about">
-                <h3>About us</h3>
-                <p>We want to help passengers to reach their destinations </p>
-            </div>
-            <div class="menuFooter">
-                <h3>Explore</h3>
-                <ul>
-                    <li><a href="#">Home<a></li>
-                    <li><a href="#destinations">Destinations</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </div>
-            <div class="menuFooter">
-                <h3>Information</h3>
-                <ul>
-                    <li><a href="#">More search</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                </ul>
-            </div class="menuFooter">
-            <div class="menuFooter">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="#">Manage My Bookings </a></li>
-                    <li><a href="#">Check-in</a></li>
-                    <li><a href="#">Hotel</a></li>
-                    <li><a href="#">Cars</a></li>
-                </ul>
-            </div>
-            </section>
-       
+            <section class="footerMenu-section"> </section>
        
     </footer>
-    
+
+    <script src="./src/components.js"></script>
+    <script src="./src/main.js"></script>
 </body>
+
+
 </html>
