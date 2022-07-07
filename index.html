@@ -1,3 +1,15 @@
+<!-- Este documento index contiene las principales secciones de la app (Header, Main y Footer)
+    y algunos de los contenedores al interior de éstas.
+    Para generar el contenido de la página se hace uso de components.js que contiene las funciones
+    necesarias para generar elementos que pueden ser reutilizados. Esas funciones serán llamadas
+    desde main.js donde cada llamado deberá tener los parámetros correspondientes a la función.
+    
+    La app es responsive, adaptandose a cualquier dispositivo a través de sus 3 tipos de vista 
+    (grande, mediana y pequeña), creadas para mejorar la usabilidad según el tamaño de cada pantalla. 
+    Los botones y opciones de las listas de Menú tienen la posibilidad de añadir una dirección de enlace;
+    por defecto se establece "#" y algunos enlaces internos de la app como "#home", "#about-us" o "#contact". 
+-->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,8 +17,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/app.css" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;800&display=swap');
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
     </style>
     <title>Airline</title>
 </head>
@@ -53,7 +68,7 @@
                 <div class="destinationCard-container">
                 </div>
 
-                <a href="#">
+                <a id="chosenDestinationLink" href="#">
                     <div class="chosenDestination-container">
                         <p class="offerName" id="chosenDestinationName" ></p>
                         <hr>

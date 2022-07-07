@@ -1,3 +1,9 @@
+// Este documento contiene los llamados a las funciones que generan componentes reutilizables en la app
+// Cada llamado debe contar con los parámetros establecidos en la función.
+// El tipo de dato que recibe cada función puede ser consultado en ./components.js
+
+
+
 createHeaderArticle("Canada", 800, link="about-us",
 "Prepare your bags and forget your worries to start enjoying your holidays in this fantastic country");
 
